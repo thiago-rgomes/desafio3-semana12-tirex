@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import bagIcon from "../../../assets/header/bag-icon.png"
 import crossIcon from "../../../assets/header/cross-icon.png"
+import formatPrice from "../../../utils/format-price";
 
 interface CartItem {
   id: number;
@@ -49,7 +50,7 @@ export default function CartModal({ items, onClose, onRemoveItem }: CartModalPro
                 <h3 className="text-base">{item.name}</h3>
                 <p className="text-base font-light">{item.quantity}
                 <span className="text-[12px] font-light ml-[15px] mr-[15px]">X</span>
-                <span className="text-[12px] font-medium text-[#B88E2F]">Rs. {item.price.toFixed(2)}</span>
+                <span className="text-[12px] font-medium text-[#B88E2F]">Rs. {formatPrice(item.price)}</span>
                 </p>
               </div>
               <button onClick={() => onRemoveItem(item.id)}>
@@ -63,7 +64,7 @@ export default function CartModal({ items, onClose, onRemoveItem }: CartModalPro
       
       <div className="ml-[30px] pt-2 flex self-start gap-[100px]">
         <p className="text-base flex self-start">Subtotal</p>
-        <p className="font-semibold text-[#B88E2F]">Rs. {subtotal.toFixed(2)}</p>
+        <p className="font-semibold text-[#B88E2F]">Rs. {formatPrice(subtotal)}</p>
       </div>
 
 
