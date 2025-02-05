@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import Header from './components/Header/Header'
 import { CartProvider } from './context/CartContext'
 import { AppRoutes } from './pages/app-routes'
+import Footer from './components/Footer/Footer'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')!).render(
         {/* <div className="flex-1 flex flex-col">
         <AppRoutes></AppRoutes>
         </div>        */}
+        <Footer></Footer>
 
         </main>
       </CartProvider>
