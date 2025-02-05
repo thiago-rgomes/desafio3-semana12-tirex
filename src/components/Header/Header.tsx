@@ -1,9 +1,10 @@
 import { useState } from "react"
+import { useCart } from "../../hooks/useCart";
 import { Link, useNavigate } from "react-router-dom"
 import siteLogo from '../../assets/header/site-logo.png';
 import userIcon from '../../assets/header/user-icon.png';
-import cartIcon from '../../assets/header/cart-icon.png';
-import CartModal from "./Components/CartModal";
+import cartIcon from '../../assets/header/cart-icon.png'
+import CartModal from "./CartModal";
 
 
 
@@ -11,27 +12,7 @@ const Header = () => {
     
     const navigate = useNavigate();
     const [showCart, setShowCart] = useState(false);
-    const [cartItems, setCartItems] = useState([
-      {
-        id: 1,
-        name: "Asgard Sofa",
-        price: 250000,
-        quantity: 1,
-        image: "/src/assets/header/cart-img1.png",
-      },
-      {
-        id: 2,
-        name: "Casaliving Wood",
-        price: 270000,
-        quantity: 2,
-        image: "/src/assets/header/cart-img2.png",
-      },
-    ]);
-
-      const removeItem = (id: number) => {
-        setCartItems(cartItems.filter(item => item.id !== id));
-      };
-
+    const { items, removeFromCart } = useCart();    
     
     return (
 
@@ -63,7 +44,7 @@ const Header = () => {
             <div className="absolute right-0 mt-2 w-[417px] bg-white shadow-lg rounded-lg p-4 z-50 overflow-y-auto "
               onMouseEnter={() => setShowCart(true)} 
               onMouseLeave={() => setShowCart(false)}>
-            <CartModal items={cartItems} onClose={() => setShowCart(false)} onRemoveItem={removeItem}/>
+            <CartModal items={items} onClose={() => setShowCart(false)} onRemoveItem={removeFromCart} />
             </div>
           </div>             
         )}
