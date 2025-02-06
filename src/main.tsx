@@ -8,6 +8,7 @@ import { AppRoutes } from './pages/app-routes'
 import Footer from './components/Footer/Footer'
 import Section1 from './pages/homePage/Section1/Section1'
 import Section2 from './pages/homePage/Section2/Section2'
+import Section5 from './pages/homePage/Section5/Section5'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')!).render(
         <Header></Header>
         <Section1></Section1>
         <Section2></Section2>
+        <Section5></Section5>
         {/* <div className="flex-1 flex flex-col">
         <AppRoutes></AppRoutes>
         </div>        */}
