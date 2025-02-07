@@ -5,7 +5,7 @@ interface CartItem {
   name: string;
   price: number;
   quantity: number;
-  image: string;
+  imageUrl: string;
 }
 
 interface CartContextType {
@@ -21,18 +21,18 @@ export const CartContext = createContext<CartContextType | undefined>(undefined)
 export function CartProvider({ children }: { children: React.ReactNode }) {
     const [items, setItems] = useState<CartItem[]>([
         {
-            id: 1,
+            id: 10,
             name: "Asgard Sofa",
             price: 250000,
             quantity: 1,
-            image: "/src/assets/header/cart-img1.png",
+            imageUrl: "/src/assets/header/cart-img1.png",
           },
           {
-            id: 2,
+            id: 11,
             name: "Casaliving Wood",
             price: 270000,
             quantity: 2,
-            image: "/src/assets/header/cart-img2.png",
+            imageUrl: "/src/assets/header/cart-img2.png",
         },
         
       ]);

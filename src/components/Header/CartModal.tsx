@@ -10,7 +10,7 @@ interface CartItem {
   name: string;
   price: number;
   quantity: number;
-  image: string;
+  imageUrl: string;
 }
 
 interface CartModalProps {
@@ -46,7 +46,7 @@ export default function CartModal({ onClose }: CartModalProps) {
         ) : (
           items.map((item) => (
             <div key={item.id} className="flex items-center justify-between w-[350px] h-[105px]">
-              <img src={item.image} alt={item.name} className="w-[108px] h-[105px] rounded flex justify-center items-center" />
+              <img src={item.imageUrl} alt={item.name} className="w-[108px] h-[105px] rounded flex justify-center items-center" />
               <div className="ml-4">
                 <h3 className="text-base">{item.name}</h3>
                 <p className="text-base font-light">
