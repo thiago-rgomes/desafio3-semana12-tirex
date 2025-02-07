@@ -10,7 +10,7 @@ import nine from '../../../assets/homepage/section5/09.png'
 
 const Section5 = () => {
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center my-[60px]'>
       <div>
         <p className="text-center font-semibold text-[20px] text-[#616161]">Share your setup with</p>
         <h2 className="text-center font-bold text-[40px] text-[#3A3A3A]">#FurniroFurniture</h2>
