@@ -7,9 +7,9 @@ export default function CartSection() {
   const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-[30px]">
+    <div className="flex flex-col lg:flex-row lg:justify-center gap-[30px] ">
       
-      <div className="w-full max-w-[817px] lg:w-2/3 bg-white py-6 space-y-[16px]">
+      <div className="w-full lg:w-2/3 bg-white py-6 space-y-[16px] 2xl:max-w-[817px]">
         <div className="flex items-center w-full font-medium h-[55px] bg-[#F9F1E7] px-[40px] mb-[20px]">
           <p className="ml-[8%] mr-[21%]">Product</p>
           <p className="mr-[17%]">Price</p>
@@ -45,7 +45,7 @@ export default function CartSection() {
         ))}
       </div>
 
-      <div className="flex flex-col items-center w-full lg:w-1/3 bg-[#F9F1E7] p-6 gap-[20px] mt-[24px]">
+      <div className="flex flex-col items-center w-full lg:w-[393px] bg-[#F9F1E7] p-6 gap-[20px] mt-[24px]">
         <h2 className="text-[32px] font-semibold mb-4">Cart Totals</h2>
         <div className="flex justify-between gap-[60px] mb-[30px]">
           <span className="font-medium">Subtotal:</span>
