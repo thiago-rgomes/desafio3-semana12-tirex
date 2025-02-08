@@ -1,9 +1,9 @@
 
 interface InputFieldProps {
-  label: string;
+  label?: string;
   name: string;
   type?: string;
-  placeholder: string;
+  placeholder?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   isTextarea?: boolean;
@@ -26,7 +26,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, name, type = "text", pla
         <input
           name={name}
           type={type}
-          className="min-w-[530px] min-h-[75px] border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-gray-500 pl-7 mb-5"
+          className=" min-h-[75px] border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-gray-500 pl-7 mb-5"
           placeholder={placeholder}
           value={value}
           onChange={onChange}
