@@ -29,7 +29,7 @@ const CheckoutPage: React.FC = () => {
 
   return (
       <div>
-        <HighLightSection pageTitle="checkout"></HighLightSection>
+        <HighLightSection pageTitle="Checkout"></HighLightSection>
 
         <div className="flex justify-center gap-[160px] py-[100px]">          
           <BillingComponent formData={formData} onChange={handleChange} />
