@@ -9,6 +9,7 @@ import ProductHighlight from "./Section1/ProductHighlight";
 import descriptionImages1 from "../../assets/productpage/product/description-img2.png"
 import descriptionImages2 from "../../assets/productpage/product/description-img2.png"
 import AdditionalDescription from "./Section2/AdditionalDescription";
+import RelatedProducts from "./Section3/RelatedProducts";
 
 const product = {
   title: "Asgaard sofa",
@@ -56,7 +57,7 @@ const ProductPage = () => {
         </div>
      </div>
       <AdditionalDescription additionalTitle={product.additionalTitle} additionalDescription={product.additionalDescription} descriptionImages={product.descriptionImages}></AdditionalDescription>
-
+      <RelatedProducts></RelatedProducts>
 
     </div>
     
