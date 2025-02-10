@@ -8,7 +8,7 @@ import heartIcon from "../../../assets/homepage/section3/heart-icon.png";
 interface ProductProps {
   id: number;
   name: string;
-  description: string;
+  subName: string;
   price: number;
   oldPrice?: number;
   imageUrl: string;
@@ -16,22 +16,14 @@ interface ProductProps {
   discount?: number;
 }
 
-const ProductCard: React.FC<ProductProps> = ({
-  id,
-  name,
-  description,
-  price,
-  oldPrice,
-  imageUrl,
-  isNew,
-  discount,
+const ProductCard: React.FC<ProductProps> = ({ id, name, subName, price, oldPrice, imageUrl, isNew, discount,
 }) => {
   const navigate = useNavigate();
   const { addToCart } = useCart();
   const [isHovered, setIsHovered] = useState(false);
 
   const handleCardClick = () => {
-    navigate(`/product/${id}`, { state: { id, name, description, price, oldPrice, imageUrl, isNew, discount } });
+    navigate(`/product/${id}`);
   };
 
   return (
@@ -49,7 +41,7 @@ const ProductCard: React.FC<ProductProps> = ({
 
       <div className="p-4 bg-[#F4F5F7] h-[145px]">
         <h3 className="text-[24px] font-semibold text-[#3A3A3A]">{name}</h3>
-        <p className="font-medium text-[#898989]">{description}</p>
+        <p className="font-medium text-[#898989]">{subName}</p>
         <div className="relative mt-2">
           <span className="text-[20px] font-semibold text-[#3A3A3A]">Rp {price.toLocaleString()}</span>
           {oldPrice && (
