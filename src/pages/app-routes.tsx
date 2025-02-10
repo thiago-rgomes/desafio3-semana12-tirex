@@ -5,6 +5,9 @@ import ContactPage from './contactPage/ContactPage';
 import CheckoutPage from './checkoutPage/CheckoutPage';
 import ShopPage from './shopPage/ShopPage';
 import ProductPage from './productPage/ProductPage';
+import LoginPage from './loginPage/LoginPage'
+import ProtectedRoute from '../components/ProtectedRoute/ProtectedRoute';
+
 
 
 
@@ -14,9 +17,12 @@ export const AppRoutes = () => {
       <Route path="/" element={<HomePage></HomePage>} />
       <Route path="/cart" element={<CartPage></CartPage>} />
       <Route path="/contact" element={<ContactPage></ContactPage>} />
-      <Route path="/checkout" element={<CheckoutPage></CheckoutPage>} />
+      <Route element={<ProtectedRoute></ProtectedRoute>}>
+        <Route path="/checkout" element={<CheckoutPage></CheckoutPage>} />      
+      </Route>
       <Route path="/shop" element={<ShopPage></ShopPage>} />
       <Route path="/product" element={<ProductPage></ProductPage>} />
+      <Route path="/login" element={<LoginPage></LoginPage>} />
       
       
     </Routes>
