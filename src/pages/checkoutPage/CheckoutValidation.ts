@@ -29,7 +29,7 @@ export const CheckoutValidation = (formData: any) => {
     if (!formData.zipcode.trim()) {
       newErrors.zipcode = "ZIP code is required";
       isValid = false;
-    } else if (!/^\d{5}(-\d{4})?$|^\d{5}-\d{3}$/.test(formData.zipcode)) {
+    } else if (!/^\d{5}\d{3}$/.test(formData.zipcode)) {
         newErrors.zipcode = "Invalid ZIP code";
         isValid = false;
     }

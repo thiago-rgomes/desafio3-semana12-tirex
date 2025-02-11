@@ -5,12 +5,13 @@ interface InputFieldProps {
   type?: string;
   placeholder?: string;
   value?: string;
+  maxlength?: number;
   onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   isTextarea?: boolean;
   error?: string;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ label, name, type = "text", placeholder, value, onChange, isTextarea = false, error }) => {
+const InputField: React.FC<InputFieldProps> = ({ label, name, type = "text", placeholder, value, maxlength, onChange, isTextarea = false, error }) => {
   return (
     <div className="flex flex-col gap-5">
       <label className="font-medium text-black">{label}</label>
@@ -27,9 +28,10 @@ const InputField: React.FC<InputFieldProps> = ({ label, name, type = "text", pla
         <input
           name={name}
           type={type}
-          className=" min-h-[75px] border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-gray-500 pl-7 mb-5"
+          className=" min-h-[75px] border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-gray-500 pl-7 mb-5 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
           placeholder={placeholder}
           value={value}
+          maxLength={maxlength}
           onChange={onChange}
         />
       )}
