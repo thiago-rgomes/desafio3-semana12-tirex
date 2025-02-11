@@ -10,7 +10,7 @@ const Footer = () => {
   const isHomePage = location.pathname === "/";
 
   return (
-    <footer className="w-full h-[505px] px-[100px] pt-[48px] pb-[38px]">
+    <footer className="w-full h-[505px] px-[100px] pt-[48px] pb-[38px] border-t-2">
       <div className="flex justify-between h-[380px] ">
         
         <div className="flex flex-col gap-[50px]">

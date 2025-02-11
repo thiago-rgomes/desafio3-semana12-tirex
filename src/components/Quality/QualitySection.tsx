@@ -5,7 +5,7 @@ import supportIcon from "../../assets/quality/support-icon.png";
 
 const QualitySection = () => {
   return (
-    <div className="flex justify-center items-center w-full h-[270px] px-[53px] py-[100px] bg-[#FAF3EA] gap-[55px] my-[20px]">
+    <div className="flex justify-center items-center w-full h-[270px] px-[53px] py-[100px] bg-[#FAF3EA] gap-[55px] mt-[20px]">
 
       <div className="flex gap-[10px]">
         <img src={trophyIcon} alt="trophy icon" className="w-[60px] h-[60px]"/>

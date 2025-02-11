@@ -71,7 +71,7 @@ export default function CartModal({ onClose }: CartModalProps) {
       <div className="w-full h-[1px] bg-gray-200 self-start mt-[23px] mb-[26px]"></div>
 
       <div className="flex justify-between items-center gap-[14px] mb-[20px]">
-        <Link to="/cartPage" className="flex justify-center items-center w-[87px] h-[30px] border border-black rounded-full text-[12px] hover:bg-gray-100">Cart</Link>
+        <Link to="/cart" className="flex justify-center items-center w-[87px] h-[30px] border border-black rounded-full text-[12px] hover:bg-gray-100">Cart</Link>
         <Link to="/checkout" className="flex justify-center items-center w-[118px] h-[30px] border border-black rounded-full text-[12px] hover:bg-gray-100">Checkout</Link>
         <Link to="/comparison" className="flex justify-center items-center w-[135px] h-[30px] border border-black rounded-full text-[12px] hover:bg-gray-100">Comparison</Link>
       </div>

@@ -8,6 +8,7 @@ import ProductMeta from "./Section1/ProductMeta";
 import ProductHighlight from "./Section1/ProductHighlight";
 import AdditionalDescription from "./Section2/AdditionalDescription";
 import RelatedProducts from "./Section3/RelatedProducts";
+import Spinner from "../../components/Spinner/Spinner";
 
 interface Product {
   id: number;
@@ -28,37 +29,41 @@ interface Product {
 }
 
 const ProductPage = () => {
-  const { id } = useParams(); 
-  const [product, setProduct] = useState<any | null>(null); 
-  const [selectedSize, setSelectedSize] = useState<string>('');
-  const [selectedColor, setSelectedColor] = useState<string>('');
+  const { id } = useParams();
+  const [product, setProduct] = useState<any | null>(null);
+  const [selectedSize, setSelectedSize] = useState<string>("");
+  const [selectedColor, setSelectedColor] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(true);
 
-  
-useEffect(() => {
-  const fetchProduct = async () => {
-    if (!id) return; 
+  useEffect(() => {
+    const fetchProduct = async () => {
+      if (!id) return;
 
-    try {
-      console.log("Buscando produto com ID:", id);
-      const response = await fetch(`http://localhost:5000/products/${id}`);
+      try {
 
-      if (!response.ok) {
-        throw new Error("Product not found");
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+
+        setLoading(true);
+        console.log("finding product with id:", id);
+        const response = await fetch(`http://localhost:5000/products/${id}`);
+
+        if (!response.ok) { 
+          throw new Error("Product not found");
+        }
+
+        const data = await response.json();
+        setProduct(data);
+        setSelectedSize(data.sizes[0]);
+        setSelectedColor(data.colors[0]);
+      } catch (error) {
+        console.error("Error on finding the product:", error);
+      } finally {
+        setLoading(false);
       }
+    };
 
-      const data = await response.json();
-      setProduct(data);
-      setSelectedSize(data.sizes[0]);
-      setSelectedColor(data.colors[0]);
-
-    } catch (error) {
-      console.error("Error on finding the product:", error);
-    }
-  };
-
-  fetchProduct();
-}, [id]);
-
+    fetchProduct();
+  }, [id]);
 
   const handleAddToCart = (quantity: number) => {
     if (product) {
@@ -66,8 +71,12 @@ useEffect(() => {
     }
   };
 
+  if (loading) {
+    return <Spinner />;
+  }
+
   if (!product) {
-    return <div className="text-center py-10">Loading product...</div>;
+    return <div className="text-center py-10">Product not found</div>;
   }
 
   return (
@@ -101,4 +110,3 @@ useEffect(() => {
 };
 
 export default ProductPage;
-
