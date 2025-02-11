@@ -14,38 +14,45 @@ interface Product {
 
 interface ProductListProps {
   itemsToShow?: number;
+  filteredProducts?: Product[];
 }
 
-const ProductList: React.FC<ProductListProps> = ({ itemsToShow = 8 }) => {
+const ProductList: React.FC<ProductListProps> = ({ itemsToShow = 8, filteredProducts }) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch("http://localhost:5000/products");
-        if (!response.ok) {
-          throw new Error("Error on finding products");
+    if (!filteredProducts) {
+      const fetchProducts = async () => {
+        try {
+          const response = await fetch("http://localhost:5000/products");
+          if (!response.ok) {
+            throw new Error("Error on finding products");
+          }
+          const data: Product[] = await response.json();
+          setProducts(data);
+        } catch (err) {
+          setError((err as Error).message);
+        } finally {
+          setLoading(false);
         }
-        const data: Product[] = await response.json();
-        setProducts(data);
-      } catch (err) {
-        setError((err as Error).message);
-      } finally {
-        setLoading(false);
-      }
-    };
+      };
 
-    fetchProducts();
-  }, []);
+      fetchProducts();
+    } else {
+      setLoading(false);
+    }
+  }, [filteredProducts]);
 
   if (loading) return <p className="text-center">loading products...</p>;
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
+  const displayedProducts = (filteredProducts || products).slice(0, itemsToShow);
+
   return (
     <div className="grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-[32px]">
-      {products.slice(0, itemsToShow).map((product) => (
+      {displayedProducts.map((product) => (
         <ProductCard key={product.id} {...product} />
       ))}
     </div>
