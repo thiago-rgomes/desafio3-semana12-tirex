@@ -1,7 +1,7 @@
 import { useCart } from "../../hooks/useCart";
 
 interface SummaryProps {
-    onSubmit: () => void;
+    onSubmit: (e: React.FormEvent) => void;
 }
 
 const SummaryComponent: React.FC<SummaryProps> = ({ onSubmit }) => {

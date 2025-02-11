@@ -13,9 +13,13 @@ const Login = () => {
     if (!email.value) {
       email.setError("Email required")
       return
-    }
+    } 
+
     if (!password.value) {
       password.setError("Password required")
+      return
+    } else if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>])[A-Za-z\d!@#$%^&*(),.?":{}|<>]{8,20}$/.test(password.value)) {
+      password.setError("The password must contain at least 8 characters, one uppercase letter, and one special character")
       return
     }
 
@@ -42,5 +46,5 @@ const Login = () => {
     </div>
   )
 }
-<button className="flex justify-center items-center w-[245px] h-[48px] font-semibold text-[#B88E2F] border border-[#B88E2F]">Show more</button>
+
 export default Login

@@ -7,9 +7,10 @@ interface InputFieldProps {
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   isTextarea?: boolean;
+  error?: string;
 }
 
-const InputField: React.FC<InputFieldProps> = ({ label, name, type = "text", placeholder, value, onChange, isTextarea = false }) => {
+const InputField: React.FC<InputFieldProps> = ({ label, name, type = "text", placeholder, value, onChange, isTextarea = false, error }) => {
   return (
     <div className="flex flex-col gap-5">
       <label className="font-medium text-black">{label}</label>
@@ -32,6 +33,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, name, type = "text", pla
           onChange={onChange}
         />
       )}
+      {error && <p className="text-red-500 text-xs mt-[-30px]">{error}</p>}
     </div>
   );
 };
