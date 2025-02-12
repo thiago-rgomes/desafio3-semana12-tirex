@@ -4,6 +4,7 @@ import { useCart } from "../../hooks/useCart";
 import bagIcon from "../../assets/header/bag-icon.png";
 import crossIcon from "../../assets/header/cross-icon.png";
 import formatPrice from "../../utils/format-price";
+import { useUser } from "@clerk/clerk-react";
 
 interface CartItem {
   id: number;
@@ -22,6 +23,7 @@ interface CartModalProps {
 export default function CartModal({ onClose }: CartModalProps) {
   const { items, removeFromCart } = useCart();
   const [subtotal, setSubtotal] = useState(0);
+  const { isSignedIn } = useUser();
 
   useEffect(() => {
     const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -83,6 +85,12 @@ export default function CartModal({ onClose }: CartModalProps) {
           </Link>
           <Link
             to="/checkout"
+            onClick={(e) => {
+              if (!isSignedIn){
+                e.preventDefault();
+                window.location.href = "/login?fromCartModal=true";
+              }
+            }}
             className="flex-1 text-center py-2 border border-black rounded-full text-sm hover:bg-gray-100 transition-colors"
           >
             Checkout
