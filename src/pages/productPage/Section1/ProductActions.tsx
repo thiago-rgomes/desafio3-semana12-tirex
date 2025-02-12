@@ -1,11 +1,21 @@
 import { useState } from "react";
 
 interface ProductActionsProps {
+  product: {
+    id: number;
+    title: string;
+    price: number;
+    imageUrl: string;
+  };
   onAddToCart: (quantity: number) => void;
 }
 
-const ProductActions: React.FC<ProductActionsProps> = ({ onAddToCart }) => {
+const ProductActions: React.FC<ProductActionsProps> = ({ product, onAddToCart }) => {
   const [quantity, setQuantity] = useState(1);
+
+  const handleAddToCart = () => {
+    onAddToCart(quantity);
+  };
 
   return (
     <div className="flex items-center gap-4 mt-6">
@@ -22,7 +32,7 @@ const ProductActions: React.FC<ProductActionsProps> = ({ onAddToCart }) => {
         </button>
       </div>
       <button
-        onClick={() => onAddToCart(quantity)}
+        onClick={handleAddToCart}
         className=" flex justify-center items-center w-[215px] h-[64px] text-[20px] border border-black rounded-xl"
       >
         Add To Cart

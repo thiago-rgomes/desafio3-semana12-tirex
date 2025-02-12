@@ -9,6 +9,7 @@ import ProductHighlight from "./Section1/ProductHighlight";
 import AdditionalDescription from "./Section2/AdditionalDescription";
 import RelatedProducts from "./Section3/RelatedProducts";
 import Spinner from "../../components/Spinner/Spinner";
+import { useCart } from "../../hooks/useCart";
 
 interface Product {
   id: number;
@@ -30,24 +31,24 @@ interface Product {
 
 const ProductPage = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState<any | null>(null);
+  const [product, setProduct] = useState<Product | null>(null);
   const [selectedSize, setSelectedSize] = useState<string>("");
   const [selectedColor, setSelectedColor] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchProduct = async () => {
       if (!id) return;
 
       try {
-
         await new Promise((resolve) => setTimeout(resolve, 1000));
 
         setLoading(true);
-        console.log("finding product with id:", id);
+        console.log("Finding product with id:", id);
         const response = await fetch(`http://localhost:3000/products/${id}`);
 
-        if (!response.ok) { 
+        if (!response.ok) {
           throw new Error("Product not found");
         }
 
@@ -56,7 +57,7 @@ const ProductPage = () => {
         setSelectedSize(data.sizes[0]);
         setSelectedColor(data.colors[0]);
       } catch (error) {
-        console.error("Error on finding the product:", error);
+        console.error("Error finding the product:", error);
       } finally {
         setLoading(false);
       }
@@ -67,7 +68,15 @@ const ProductPage = () => {
 
   const handleAddToCart = (quantity: number) => {
     if (product) {
-      console.log(`Adicionado ${quantity}x ${product.title} ao carrinho`);
+      
+      addToCart({
+        id: product.id,
+        name: product.title,
+        price: product.price,
+        quantity: quantity,
+        imageUrl: product.images[0],
+      });
+      console.log(`Added ${quantity}x ${product.title} to the cart`);
     }
   };
 
@@ -95,7 +104,15 @@ const ProductPage = () => {
             selectedColor={selectedColor}
             setSelectedColor={setSelectedColor}
           />
-          <ProductActions onAddToCart={handleAddToCart} />
+          <ProductActions
+            product={{
+              id: product.id,
+              title: product.title,
+              price: product.price,
+              imageUrl: product.images[0],
+            }}
+            onAddToCart={handleAddToCart}
+          />
           <ProductMeta sku={product.sku} category={product.category} tags={product.tags} />
         </div>
       </div>

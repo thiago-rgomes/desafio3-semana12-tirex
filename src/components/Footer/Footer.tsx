@@ -1,28 +1,81 @@
 import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom"
-import faceBookIcon from "../../assets/footer/facebook-icon.png"
-import instagramIcon from "../../assets/footer/instagram-icon.png"
-import twitterIcon from "../../assets/footer/twitter-icon.png"
-import linkedinIcon from "../../assets/footer/linkedin-icon.png"
+import { Link } from "react-router-dom";
+import faceBookIcon from "../../assets/footer/facebook-icon.png";
+import instagramIcon from "../../assets/footer/instagram-icon.png";
+import twitterIcon from "../../assets/footer/twitter-icon.png";
+import linkedinIcon from "../../assets/footer/linkedin-icon.png";
+import { useState } from "react";
 
 const Footer = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState<string | null>(null);
+
+  const validateEmail = (email: string) => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return regex.test(email);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address.");
+    } else {
+      setEmailError(null);
+      console.log("Email submitted:", email);
+    }
+  };
 
   return (
     <footer className="w-full h-[505px] px-[100px] pt-[48px] pb-[38px] border-t-2">
       <div className="flex justify-between h-[380px] ">
-        
         <div className="flex flex-col gap-[50px]">
           <h2 className="font-bold text-[24px]">Furniro.</h2>
-          <p className="text-base text-[#9F9F9F]">400 University Drive Suite 200 Coral <br /> Gables,<br /> FL 33134 USA</p>
-          
+          <p className="text-base text-[#9F9F9F]">
+            400 University Drive Suite 200 Coral <br /> Gables,<br /> FL 33134 USA
+          </p>
+
           {isHomePage && (
             <div className="flex justify-between w-[184px] h-[34px]">
-              <a href="https://www.facebook.com"><div className="flex justify-center items-center w-[34px] h-[34px] rounded-full shadow-lg"><img src={faceBookIcon} className="[12px] h-[12px]" alt="facebook icon" /></div></a>
-              <a href="https://www.instagram.com"><div className="flex justify-center items-center w-[34px] h-[34px] rounded-full shadow-lg"><img src={instagramIcon} className="[12px] h-[12px]" alt="facebook icon" /></div></a>
-              <a href="https://www.twitter.com"><div className="flex justify-center items-center w-[34px] h-[34px] rounded-full shadow-lg"><img src={twitterIcon} className="[12px] h-[12px]" alt="facebook icon" /></div></a>
-              <a href="https://www.linkedin.com"><div className="flex justify-center items-center w-[34px] h-[34px] rounded-full shadow-lg"><img src={linkedinIcon} className="[12px] h-[12px]" alt="facebook icon" /></div></a>
+              <a href="https://www.facebook.com">
+                <div className="flex justify-center items-center w-[34px] h-[34px] rounded-full shadow-lg">
+                  <img
+                    src={faceBookIcon}
+                    className="[12px] h-[12px]"
+                    alt="facebook icon"
+                  />
+                </div>
+              </a>
+              <a href="https://www.instagram.com">
+                <div className="flex justify-center items-center w-[34px] h-[34px] rounded-full shadow-lg">
+                  <img
+                    src={instagramIcon}
+                    className="[12px] h-[12px]"
+                    alt="facebook icon"
+                  />
+                </div>
+              </a>
+              <a href="https://www.twitter.com">
+                <div className="flex justify-center items-center w-[34px] h-[34px] rounded-full shadow-lg">
+                  <img
+                    src={twitterIcon}
+                    className="[12px] h-[12px]"
+                    alt="facebook icon"
+                  />
+                </div>
+              </a>
+              <a href="https://www.linkedin.com">
+                <div className="flex justify-center items-center w-[34px] h-[34px] rounded-full shadow-lg">
+                  <img
+                    src={linkedinIcon}
+                    className="[12px] h-[12px]"
+                    alt="facebook icon"
+                  />
+                </div>
+              </a>
             </div>
           )}
         </div>
@@ -33,7 +86,7 @@ const Footer = () => {
             <Link to="/">Home</Link>
             <Link to="/shop">Shop</Link>
             <Link to="">About</Link>
-            <Link to="/contact">Contact</Link> 
+            <Link to="/contact">Contact</Link>
           </ul>
         </div>
 
@@ -48,8 +101,21 @@ const Footer = () => {
 
         <div>
           <h3 className="font-medium text-[#9F9F9F] mb-[55px]">Newsletter</h3>
-          <input type="email" placeholder="Enter Your Email Address" className="text-[14px] border-b-2 border-black mr-[10px]"/>
-          <button className="font-medium text-[14px] border-b-2 border-black">SUBSCRIBE</button>
+          <form onSubmit={handleSubmit} className="flex">
+            <input
+              type="email"
+              placeholder="Enter Your Email Address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="text-[14px] border-b-2 border-black mr-[10px] p-[5px]"
+            />
+            <button type="submit" className="font-medium text-[14px] border-b-2 border-black">
+              SUBSCRIBE
+            </button>
+          </form>
+          {emailError && (
+            <p className="text-red-500 text-sm mt-2">{emailError}</p>
+          )}
         </div>
       </div>
 

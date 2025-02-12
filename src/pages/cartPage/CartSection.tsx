@@ -6,9 +6,12 @@ export default function CartSection() {
 
   const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
+  const handleCheckout = () => {
+    window.location.href = "/login?fromCartModal=true";
+  };
+
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-center gap-[30px] ">
-      
+    <div className="flex flex-col lg:flex-row lg:justify-center gap-[30px]">
       <div className="w-full lg:w-2/3 bg-white py-6 space-y-[16px] 2xl:max-w-[817px]">
         <div className="flex items-center w-full font-medium h-[55px] bg-[#F9F1E7] px-[40px] mb-[20px]">
           <p className="ml-[8%] mr-[21%]">Product</p>
@@ -55,7 +58,10 @@ export default function CartSection() {
           <span className="font-medium">Total:</span>
           <span className="text-[20px] font-medium text-[#B88E2F]">Rs. {subtotal.toLocaleString()}</span>
         </div>
-        <button className="w-[222px] h-[60px] border-2 border-black text-[20px] text-black py-2 mt-4 rounded-lg">
+        <button 
+          onClick={handleCheckout} 
+          className="w-[222px] h-[60px] border-2 border-black text-[20px] text-black py-2 mt-4 rounded-lg"
+        >
           Check Out
         </button>
       </div>

@@ -79,6 +79,9 @@ export default function CartModal({ onClose }: CartModalProps) {
         <div className="flex justify-between gap-4">
           <Link
             to="/cart"
+            onClick={(e) => {
+              onClose();
+            }}
             className="flex-1 text-center py-2 border border-black rounded-full text-sm hover:bg-gray-100 transition-colors"
           >
             Cart
@@ -89,6 +92,8 @@ export default function CartModal({ onClose }: CartModalProps) {
               if (!isSignedIn){
                 e.preventDefault();
                 window.location.href = "/login?fromCartModal=true";
+              } else {
+                onClose();
               }
             }}
             className="flex-1 text-center py-2 border border-black rounded-full text-sm hover:bg-gray-100 transition-colors"
