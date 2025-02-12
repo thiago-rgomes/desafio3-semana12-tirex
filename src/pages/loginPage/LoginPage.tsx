@@ -96,7 +96,7 @@ const Login = () => {
               className="flex w-full justify-center items-center text-[#B88E2F] border border-[#B88E2F] p-2 rounded-md hover:bg-[#fffcf5] transition disabled:bg-gray-400 mt-2"
               disabled={loading}
             >
-              {loading ? "Carregando..." : "Entrar"}
+              {loading ? "Loading..." : "Enter"}
             </button>
 
             <div className="flex items-center justify-between text-sm">
