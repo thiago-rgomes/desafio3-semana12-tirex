@@ -28,7 +28,7 @@ const ProductCard: React.FC<ProductProps> = ({ id, name, subName, price, oldPric
 
   return (
     <div
-      className="max-w-[285px] max-h-[446px] overflow-hidden bg-white relative cursor-pointer"
+      className="max-w-[285px] max-h-[446px] overflow-hidden bg-white relative cursor-pointer min-h-[300px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={handleCardClick}
@@ -43,9 +43,9 @@ const ProductCard: React.FC<ProductProps> = ({ id, name, subName, price, oldPric
         <h3 className="text-[24px] font-semibold text-[#3A3A3A]">{name}</h3>
         <p className="font-medium text-[#898989]">{subName}</p>
         <div className="relative mt-2 flex justify-between items-center">
-          <span className="text-[20px] font-semibold text-[#3A3A3A]">Rp {price.toLocaleString()}</span>
+          <span className="lg:text-[20px] font-semibold text-[#3A3A3A]">Rp {price.toLocaleString()}</span>
           {oldPrice && (
-            <span className="absolute right-4 text-gray-400 line-through ml-2">Rp {oldPrice.toLocaleString()}</span>
+            <span className=" text-gray-400 line-through">Rp {oldPrice.toLocaleString()}</span>
           )}
         </div>
       </div>

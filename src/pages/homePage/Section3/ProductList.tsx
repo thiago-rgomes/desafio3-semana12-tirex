@@ -79,7 +79,7 @@ const ProductList: React.FC<ProductListProps> = ({ sortBy = "Default", filterBy 
 
   return (
     <div>
-      <div className="grid place-items-center md:grid-cols-2 lg:grid-cols-4 gap-[32px]">
+      <div className="grid grid-cols-2 place-items-center md:grid-cols-4 gap-[32px]">
         {displayedProducts.length > 0 ? (
           displayedProducts.map((product) => <ProductCard key={product.id} {...product} />)
         ) : (
