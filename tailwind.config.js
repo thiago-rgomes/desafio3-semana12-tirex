@@ -9,6 +9,11 @@ module.exports = {
         montserrat: ['Montserrat', 'sans-serif'],
       },
     },
+    screens: {
+      
+      'md': '1000px'
+      
+    },
   },
   plugins: [],
 }
