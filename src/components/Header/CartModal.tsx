@@ -15,7 +15,7 @@ interface CartItem {
 
 interface CartModalProps {
   items: CartItem[];
-  onClose: () => void; 
+  onClose: () => void;
   onRemoveItem: (id: number) => void;
 }
 
@@ -29,51 +29,71 @@ export default function CartModal({ onClose }: CartModalProps) {
   }, [items]);
 
   return (
-    <div className="flex flex-col items-center fixed top-0 right-0 w-[417px] h-[746px] pt-[30px] bg-white shadow-lg z-50">
+    <div className="flex flex-col fixed top-0 right-0 w-[417px] h-full bg-white shadow-lg z-50">
       
-      <div className="flex gap-[152px] items-center pb-[26px] w-[350px]">
+      <div className="flex justify-between items-center p-6 border-b border-gray-200">
         <h2 className="text-[24px] font-semibold">Shopping Cart</h2>
-        <button onClick={onClose}>
+        <button onClick={onClose} className="hover:opacity-70">
           <img src={bagIcon} alt="cart-icon" />
         </button>
       </div>
 
-      <div className="w-[287px] h-[1px] bg-gray-200 self-start ml-[34px] mb-[42px]"></div>
-
-      <div className="mt-4 space-y-4 overflow-y-auto h-2/3 w-[350px]">
+      <div className="flex-1 overflow-y-auto px-6 py-4">
         {items.length === 0 ? (
-          <p className="text-gray-500">Seu carrinho está vazio.</p>
+          <p className="text-gray-500 text-center">Your cart is empty.</p>
         ) : (
           items.map((item) => (
-            <div key={item.id} className="flex items-center justify-between w-[350px] h-[105px]">
-              <img src={item.imageUrl} alt={item.name} className="w-[108px] h-[105px] rounded flex justify-center items-center" />
-              <div className="ml-4">
-                <h3 className="text-base">{item.name}</h3>
-                <p className="text-base font-light">
-                  {item.quantity}
-                  <span className="text-[12px] font-light ml-[15px] mr-[15px]">X</span>
-                  <span className="text-[12px] font-medium text-[#B88E2F]">Rs. {formatPrice(item.price)}</span>
+            <div
+              key={item.id}
+              className="flex items-center justify-between gap-4 py-4 border-b border-gray-200 last:border-b-0"
+            >
+              <img
+                src={item.imageUrl}
+                alt={item.name}
+                className="w-[80px] h-[80px] object-cover rounded"
+              />
+              <div className="flex-1">
+                <h3 className="text-base font-medium">{item.name}</h3>
+                <p className="text-sm text-gray-600">
+                  {item.quantity} <span className="mx-1">×</span> Rs. {formatPrice(item.price)}
                 </p>
               </div>
-              <button onClick={() => removeFromCart(item.id)}>
-                <img src={crossIcon} alt="cart-icon" />
+              <button
+                onClick={() => removeFromCart(item.id)}
+                className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              >
+                <img src={crossIcon} alt="remove-icon" className="w-4 h-4" />
               </button>
             </div>
           ))
         )}
       </div>
 
-      <div className="ml-[30px] pt-2 flex self-start gap-[100px]">
-        <p className="text-base flex self-start">Subtotal</p>
-        <p className="font-semibold text-[#B88E2F]">Rs. {formatPrice(subtotal)}</p>
-      </div>
-
-      <div className="w-full h-[1px] bg-gray-200 self-start mt-[23px] mb-[26px]"></div>
-
-      <div className="flex justify-between items-center gap-[14px] mb-[20px]">
-        <Link to="/cart" className="flex justify-center items-center w-[87px] h-[30px] border border-black rounded-full text-[12px] hover:bg-gray-100">Cart</Link>
-        <Link to="/checkout" className="flex justify-center items-center w-[118px] h-[30px] border border-black rounded-full text-[12px] hover:bg-gray-100">Checkout</Link>
-        <Link to="/comparison" className="flex justify-center items-center w-[135px] h-[30px] border border-black rounded-full text-[12px] hover:bg-gray-100">Comparison</Link>
+      <div className="sticky bottom-0 bg-white border-t border-gray-200 p-6">
+        <div className="flex justify-between items-center mb-6">
+          <p className="text-base">Subtotal</p>
+          <p className="font-semibold text-[#B88E2F]">Rs. {formatPrice(subtotal)}</p>
+        </div>
+        <div className="flex justify-between gap-4">
+          <Link
+            to="/cart"
+            className="flex-1 text-center py-2 border border-black rounded-full text-sm hover:bg-gray-100 transition-colors"
+          >
+            Cart
+          </Link>
+          <Link
+            to="/checkout"
+            className="flex-1 text-center py-2 border border-black rounded-full text-sm hover:bg-gray-100 transition-colors"
+          >
+            Checkout
+          </Link>
+          <Link
+            to="/comparison"
+            className="flex-1 text-center py-2 border border-black rounded-full text-sm hover:bg-gray-100 transition-colors"
+          >
+            Comparison
+          </Link>
+        </div>
       </div>
     </div>
   );

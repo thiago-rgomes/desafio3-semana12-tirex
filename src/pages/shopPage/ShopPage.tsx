@@ -7,17 +7,14 @@ import listIcon from "../../assets/shoppage/view-list-icon.png";
 import ProductList from "../homePage/Section3/ProductList";
 
 const ShopPage = () => {
+  const [sortBy, setSortBy] = useState("Default");
+  const [filterBy, setFilterBy] = useState("Crescent");
   const [itemsToShow, setItemsToShow] = useState(16);
-
-  
-  const handleItemsToShowChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const value = Number(e.target.value);
-    setItemsToShow(value);
-  };
 
   return (
     <div>
-      <HighLightSection pageTitle="Shop"></HighLightSection>
+      <HighLightSection pageTitle="Shop" />
+
       <div className="flex justify-between items-center w-full h-[100px] bg-[#F9F1E7] px-[100px]">
         <div className="flex items-center gap-8">
           <img src={filterIcon} alt="filter icon" className="h-[25px] w-[25px]" />
@@ -25,16 +22,14 @@ const ShopPage = () => {
           <img src={gridIcon} alt="grid icon" className="h-[25px] w-[25px]" />
           <img src={listIcon} alt="list icon" className="h-[25px] w-[25px]" />
           <div className="w-[2px] h-10 bg-[#9F9F9F] mx-4"></div>
-          <p className="text-[20px]">Showing 1–{itemsToShow} of 32 results</p>
         </div>
 
         <div className="flex gap-[30px]">
           <div className="flex items-center text-[20px] gap-[17px]">
-            <label htmlFor="show">Show</label>
+            <label>Show</label>
             <select
-              name="show"
               value={itemsToShow}
-              onChange={handleItemsToShowChange} 
+              onChange={(e) => setItemsToShow(Number(e.target.value))}
               className="flex w-[85px] h-[55px] text-[#9F9F9F] text-center"
             >
               <option value={4}>4</option>
@@ -45,20 +40,34 @@ const ShopPage = () => {
           </div>
 
           <div className="flex items-center text-[20px] gap-[17px]">
-            <label htmlFor="sortby">Sort by</label>
-            <input
-              name="sortby"
-              type="text"
-              value="Default"
-              placeholder="Default"
+            <label>Sort by</label>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
               className="w-[188px] h-[55px] text-[#9F9F9F] text-center"
-            />
+            >
+              <option value="Default">Default</option>
+              <option value="title">Title</option>
+              <option value="price">Price</option>
+            </select>
+          </div>
+
+          <div className="flex items-center text-[20px] gap-[17px]">
+            <label>Order</label>
+            <select
+              value={filterBy}
+              onChange={(e) => setFilterBy(e.target.value)}
+              className="w-[188px] h-[55px] text-[#9F9F9F] text-center"
+            >
+              <option value="Crescent">Crescent</option>
+              <option value="Decrescent">Decrescent</option>
+            </select>
           </div>
         </div>
       </div>
 
       <div className="w-full min-h-[1084px] flex flex-col items-center py-[60px] mb-[32px]">
-        <ProductList itemsToShow={itemsToShow} />
+        <ProductList sortBy={sortBy} filterBy={filterBy} itemsToShow={itemsToShow} />
       </div>
 
       <QualitySection />

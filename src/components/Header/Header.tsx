@@ -30,7 +30,7 @@ const Header = () => {
         </nav>
 
         <div className="flex gap-[34px]">   
-          <img src={userIcon} alt="user-icon" className="w-[23px] h-[19px]" />
+        <Link to="/login"> <img src={userIcon} alt="user-icon" className="w-[23px] h-[19px] cursor-pointer" /> </Link>
 
           <div onMouseEnter={() => setShowCart(true)} onMouseLeave={() => setShowCart(false)}>
             <img src={cartIcon} alt="cart-icon" className="w-[23px] h-[19px]" onClick={() => navigate("/cartPage")} />
