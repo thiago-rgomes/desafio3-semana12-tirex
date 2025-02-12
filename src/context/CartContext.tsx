@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 interface CartItem {
   id: number;
@@ -18,25 +18,30 @@ interface CartContextType {
 
 export const CartContext = createContext<CartContextType | undefined>(undefined);
 
-
 export function CartProvider({ children }: { children: React.ReactNode }) {
-    const [items, setItems] = useState<CartItem[]>([
-        {
-            id: 10,
-            name: "Asgard Sofa",
-            price: 250000,
-            quantity: 1,
-            imageUrl: "/src/assets/header/cart-img1.png",
-          },
-          {
-            id: 11,
-            name: "Casaliving Wood",
-            price: 270000,
-            quantity: 2,
-            imageUrl: "/src/assets/header/cart-img2.png",
-        },
-        
-      ]);
+  const [items, setItems] = useState<CartItem[]>(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [
+      {
+        id: 10,
+        name: "Asgard Sofa",
+        price: 250000,
+        quantity: 1,
+        imageUrl: "/src/assets/header/cart-img1.png",
+      },
+      {
+        id: 11,
+        name: "Casaliving Wood",
+        price: 270000,
+        quantity: 2,
+        imageUrl: "/src/assets/header/cart-img2.png",
+      },
+    ];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(items));
+  }, [items]);
 
   const addToCart = (item: CartItem) => {
     setItems(prevItems => {
@@ -66,7 +71,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         )
     );
   };
-  
 
   return (
     <CartContext.Provider value={{ items, addToCart, removeFromCart, clearCart, updateQuantity }}>
@@ -74,5 +78,3 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     </CartContext.Provider>
   );
 }
-
-
