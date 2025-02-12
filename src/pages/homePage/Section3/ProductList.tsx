@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import Spinner from "../../../components/Spinner/Spinner";
 
@@ -24,6 +25,7 @@ const ProductList: React.FC<ProductListProps> = ({ sortBy = "Default", filterBy 
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
+  const location = useLocation();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -85,21 +87,29 @@ const ProductList: React.FC<ProductListProps> = ({ sortBy = "Default", filterBy 
         )}
       </div>
 
-      <div className="flex justify-center items-center mt-14 gap-[38px] text-[20px]">        
+      {location.pathname === "/shop" && (
+        <div className="flex justify-center items-center mt-14 gap-[38px] text-[20px]">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index + 1}
+              onClick={() => handlePageChange(index + 1)}
+              className={`px-4 py-2 w-[60px] h-[60px] rounded-md ${
+                currentPage === index + 1 ? "bg-[#B88E2F] text-white w-[60px] h-[60px] rounded-md" : "bg-[#F9F1E7]"
+              } rounded`}
+            >
+              {index + 1}
+            </button>
+          ))}
 
-        {Array.from({ length: totalPages }, (_, index) => (
-          <button key={index + 1} onClick={() => handlePageChange(index + 1)} className={`px-4 py-2 w-[60px] h-[60px] rounded-md ${
-              currentPage === index + 1 ? "bg-[#B88E2F] text-white w-[60px] h-[60px] rounded-md" : "bg-[#F9F1E7]"
-            } rounded`}>
-            {index + 1}
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="flex justify-center items-center px-4 py-2 bg-[#F9F1E7] rounded-md disabled:opacity-50 w-[98px] h-[60px]"
+          >
+            Next
           </button>
-        ))}
-
-        <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}
-        className="flex justify-center items-center px-4 py-2 bg-[#F9F1E7] rounded-md disabled:opacity-50 w-[98px] h-[60px]">
-          Next
-        </button>
-      </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -14,7 +14,7 @@ export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="max-w-[1400px]  mx-auto px-4">
+    <div className="max-w-[1400px] mx-auto px-4">
       <Splide
         options={{
           type: "slide",
@@ -35,7 +35,11 @@ export default function Carousel() {
         {images.map((image, index) => (
           <SplideSlide key={image.id}>
             <div className={`relative group z-15 transition-all duration-300 ${index === activeIndex ? "scale-105" : "scale-95"}`}>
-              <img src={image.src} alt={image.title} className="min-w-[200px] h-[582px]" />
+              <img 
+                src={image.src} 
+                alt={image.title} 
+                className={`min-w-[200px] transition-all duration-300 ${index === activeIndex ? "h-[582px]" : "h-[486px]"} object-cover`} 
+              />
                            
               {index === activeIndex && (
                 <div className="absolute flex flex-col justify-center w-[217px] h-[130px] bottom-4 left-4 bg-white opacity-70 p-3 shadow-md">
