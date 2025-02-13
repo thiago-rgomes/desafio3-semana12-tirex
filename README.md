@@ -4,7 +4,7 @@
 
 ## 📋 Descrição do Projeto
 
-Este projeto foi desenvolvido para o desafio 3 - semana 12 da trilha PB Front-end (React) da Compass.Uol, onde o objetivo foi recriar um websie utilizando **React**, **TypeScript**, **TailwindCSS**. O foco principal é a criação de uma aplicação web responsiva e funcional, conforme as especificações fornecidas.
+Este projeto foi desenvolvido para o desafio 3 - semana 12 da trilha PB Front-end (React) da Compass.Uol, onde o objetivo foi recriar um websie utilizando **React**, **TypeScript**, **TailwindCSS**. O foco principal é a criação de uma aplicação web responsiva e funcional, com o design baseado no figma, onde o usuário pode adicionar ou remover produtos no carrinho em tempo real.
 
 ## 💻 Tecnologias Utilizadas
 - **React**
@@ -93,9 +93,9 @@ Este projeto foi desenvolvido para o desafio 3 - semana 12 da trilha PB Front-en
 
 
 ### Rotas
-- Se o usuário clicar no ícone de usuário do Header, será encaminhado para a LoginPage, e se lá for autenticado com sucesso, ele será redirecionado para a HomePage.
+- Se o usuário clicar no ícone de usuário do Header, será encaminhado para a LoginPage, e se for autenticado com sucesso, será redirecionado para a HomePage.
 
-- Se o usuário clicar no botão de Checkout do carrinho, será encaminhado para a LoginPage, e se lá for autenticado com sucesso, ele será redirecionado para a CheckoutPage.
+- Se o usuário clicar no botão de Checkout do carrinho, será encaminhado para a LoginPage, e se for autenticado com sucesso, será redirecionado para a CheckoutPage.
 
 
 
@@ -106,7 +106,6 @@ Este projeto foi desenvolvido para o desafio 3 - semana 12 da trilha PB Front-en
 - **Gerenciamento de Produtos**: Adição, edição, e remoção de produtos em tempo real.
 - **Responsividade**: Layout adaptado para múltiplos dispositivos.
 - **Validações Customizadas**: Implementação de validações de formulários.
-  
 
  
 
@@ -120,7 +119,7 @@ Este projeto foi desenvolvido para o desafio 3 - semana 12 da trilha PB Front-en
 
 2. Instale as dependências:
    ```bash
-   npm i  <============ a atualizar
+   npm i
    ```  
 
 3. Inicie a aplicação:

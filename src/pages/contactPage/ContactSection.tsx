@@ -68,9 +68,9 @@ const ContactSection: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center w-full px-4 md:px-[190px] pt-[100px]">
-            <div className="flex flex-col items-center gap-[7px] text-center">
+            <div className="flex flex-col items-center gap-[7px] md:gap-4 text-center">
                 <h2 className="text-2xl md:text-[36px] font-semibold">Get In Touch With Us</h2>
-                <p className="text-[#9F9F9F]">For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
+                <p className="text-[#9F9F9F] max-w-[685px]">For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
             </div>
 
             <div className="flex flex-col md:flex-row py-[100px] gap-[50px]">

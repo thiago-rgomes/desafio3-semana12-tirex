@@ -6,7 +6,7 @@ const Section2 = () => {
   return (
     <div className="flex flex-col items-center w-full h-auto py-8 md:py-[56px]">
       <div className="pb-6 md:pb-[48px]">
-        <h2 className="text-center font-bold text-2xl md:text-[32px] text-[#333333]">Browse the Range</h2>
+        <h2 className="text-center font-bold text-2xl md:text-[32px] text-[#333333] md:pb-4">Browse the Range</h2>
         <p className="text-center text-base md:text-[20px] text-[#666666]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
