@@ -30,7 +30,7 @@ export default function CartSection() {
               />             
             </div>
             <p className="text-[#9F9F9F]">Rs. {item.price.toLocaleString()}</p>
-            <div className="flex items-center justify-center border border-[#9F9F9F] rounded-md gap-2 p-2 max-w-[106px] ml-5">
+            <div className="flex items-center justify-center border border-[#9F9F9F] rounded-md gap-2 p-2 min-w-[68px] max-w-[106px] ml-5">
               <button onClick={() => updateQuantity(item.id, -1)}>-</button>
               <span className="px-3 font-medium">{item.quantity}</span>
               <button onClick={() => updateQuantity(item.id, 1)}>+</button>

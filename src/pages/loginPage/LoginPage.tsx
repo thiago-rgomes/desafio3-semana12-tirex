@@ -46,11 +46,11 @@ const Login = () => {
   };
 
   return (
-    <div className="flex justify-center items-center lg:h-[500px] bg-gray-100 py-4">
-      <div className="flex flex-col lg:flex-row lg:h-[500px] w-full">
+    <div className="flex justify-center items-center md:h-[500px] bg-gray-100 py-4">
+      <div className="flex flex-col md:flex-row md:h-[500px] w-full">
         
         <div
-          className="relative rounded-lg w-full lg:w-1/2 h-[500px] lg:h-auto flex items-center justify-center"
+          className="relative rounded-lg w-full md:w-1/2 h-[500px] md:h-auto flex items-center justify-center"
           style={{
             backgroundImage: `url(${highLightBg})`,
             backgroundPosition: "center",
@@ -69,7 +69,7 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="bg-white p-8 rounded-lg w-full lg:w-1/2 flex-shrink-0">
+        <div className="bg-white p-8 rounded-lg w-full md:w-1/2 flex-shrink-0">
           <h2 className="text-xl font-semibold mb-4 text-[#B88E2F]">Login</h2>
           <form onSubmit={handleSubmit} className="flex flex-col gap-8">
             <LoginForm

@@ -51,7 +51,7 @@ const CheckoutPage: React.FC = () => {
     <div>
       <HighLightSection pageTitle="Checkout" />
 
-      <div className="flex justify-center gap-[160px] py-[100px]">
+      <div className="flex flex-col md:flex-row md:justify-center gap-[80px] md:gap-[160px] py-[100px]">
         <BillingComponent formData={formData} onChange={handleChange} errors={errors} />
         <SummaryComponent onSubmit={handleSubmit} />
       </div>

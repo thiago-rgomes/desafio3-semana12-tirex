@@ -28,7 +28,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, name, type = "text", pla
         <input
           name={name}
           type={type}
-          className=" min-h-[75px] border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-gray-500 pl-7 mb-5 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+          className=" h-[50px] md:min-h-[75px] border border-gray-300 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-gray-500 pl-7 mb-5 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
           placeholder={placeholder}
           value={value}
           maxLength={maxlength}

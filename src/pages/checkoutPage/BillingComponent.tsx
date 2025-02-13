@@ -61,10 +61,10 @@ const BillingComponent: React.FC<BillingProps> = ({ formData, onChange, errors }
   };
 
   return (
-    <div className="flex flex-col">
-      <h1 className="font-semibold text-[36px] mb-12">Billing Details</h1>
+    <div className="flex flex-col px-20 md:px-0">
+      <h1 className="font-semibold text-[36px] mb-12 text-center md:text-start">Billing Details</h1>
       
-      <div className="flex gap-[30px]">
+      <div className="flex gap-[30px] justify-center md:justify-start">
         <div className="flex flex-col">
           <InputField label="First Name" name="firstname" value={formData.firstname} onChange={onChange} />
           {errors.firstname && <p className="text-red-500 text-sm mt-[-10px]">{errors.firstname}</p>}

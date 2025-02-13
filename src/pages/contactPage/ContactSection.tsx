@@ -63,18 +63,17 @@ const ContactSection: React.FC = () => {
         e.preventDefault();
         if (validate()) {
             console.log(formData);
-            // future API
         }
     };
 
     return (
-        <div className="flex flex-col items-center w-full px-[190px] pt-[100px]">
-            <div className="flex flex-col items-center gap-[7px]">
-                <h2 className="text-[36px] font-semibold">Get In Touch With Us</h2>
-                <p className="text-[#9F9F9F] text-center">For More Information About Our Product & Services. Please Feel Free To Drop Us <br /> An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
+        <div className="flex flex-col items-center w-full px-4 md:px-[190px] pt-[100px]">
+            <div className="flex flex-col items-center gap-[7px] text-center">
+                <h2 className="text-2xl md:text-[36px] font-semibold">Get In Touch With Us</h2>
+                <p className="text-[#9F9F9F]">For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
             </div>
 
-            <div className="flex py-[100px] gap-[50px]">
+            <div className="flex flex-col md:flex-row py-[100px] gap-[50px]">
                 <div className="max-w-sm mx-auto bg-white p-4">
                     <InformationComponent imgSrc={locationIcon} title="Address">
                         <p>236 5th SE Avenue, New York NY10000, United States</p>
@@ -91,7 +90,7 @@ const ContactSection: React.FC = () => {
                     </InformationComponent>
                 </div>
 
-                <div className="min-w-[635px] mx-auto p-6 bg-white">
+                <div className="w-full md:min-w-[635px] mx-auto p-6 bg-white">
                     <form onSubmit={handleSubmit} className="space-y-4">
                         <InputField
                             label="Your name"
@@ -130,7 +129,7 @@ const ContactSection: React.FC = () => {
 
                         <button
                             type="submit"
-                            className="min-w-[237px] min-h-[55px] bg-[#B88E2F] text-white py-2 rounded-lg hover:bg-yellow-700"
+                            className="w-full md:min-w-[237px] min-h-[55px] bg-[#B88E2F] text-white py-2 rounded-lg hover:bg-yellow-700"
                         >
                             Submit
                         </button>

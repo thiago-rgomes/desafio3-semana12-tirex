@@ -9,7 +9,7 @@ const SummaryComponent: React.FC<SummaryProps> = ({ onSubmit }) => {
     const subtotal = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
-    <div className="flex flex-col max-w-[35%]">
+    <div className="flex flex-col px-12 md:max-w-[35%] md:[px-0]">
         <div className="flex flex-col border-b-2 mb-[30px] gap-[20px]">
             <div className="flex justify-between font-medium text-[24px]">
                <h3>Product</h3> <p>Subtotal</p> 
