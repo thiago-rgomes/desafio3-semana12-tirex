@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "../../../hooks/useCart";
-import shareIcon from "../../../assets/homepage/section3/share-icon.png";
-import compareIcon from "../../../assets/homepage/section3/compare-icon.png";
-import heartIcon from "../../../assets/homepage/section3/heart-icon.png";
+import { useCart } from "../../hooks/useCart";
+import shareIcon from "../../assets/homepage/section3/share-icon.png";
+import compareIcon from "../../assets/homepage/section3/compare-icon.png";
+import heartIcon from "../../assets/homepage/section3/heart-icon.png";
 
 interface ProductProps {
   id: number;

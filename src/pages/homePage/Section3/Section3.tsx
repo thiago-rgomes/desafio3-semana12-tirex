@@ -1,4 +1,4 @@
-import ProductList from "./ProductList"
+import ProductList from "../../../components/Product/ProductList"
 
 
 const Section3 = () => {

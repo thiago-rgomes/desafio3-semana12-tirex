@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import siteLogo from '../../assets/header/site-logo.png';
 import userIcon from '../../assets/header/user-icon.png';
 import cartIcon from '../../assets/header/cart-icon.png';
-import CartModal from "./CartModal";
+import CartModal from "../../context/CartModal";
 
 const Header = () => {
   const navigate = useNavigate();

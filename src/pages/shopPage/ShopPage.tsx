@@ -4,7 +4,7 @@ import QualitySection from "../../components/Quality/QualitySection";
 import filterIcon from "../../assets/shoppage/filter-icon.png";
 import gridIcon from "../../assets/shoppage/grid-icon.png";
 import listIcon from "../../assets/shoppage/view-list-icon.png";
-import ProductList from "../homePage/Section3/ProductList";
+import ProductList from "../../components/Product/ProductList";
 
 const ShopPage = () => {
   const [sortBy, setSortBy] = useState("Default");

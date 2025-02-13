@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import ProductCard from "./ProductCard";
-import Spinner from "../../../components/Spinner/Spinner";
+import Spinner from "../Spinner/Spinner";
 
 interface Product {
   id: number;

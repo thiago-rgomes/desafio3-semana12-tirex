@@ -1,4 +1,4 @@
-import ProductList from "../../homePage/Section3/ProductList";
+import ProductList from "../../../components/Product/ProductList";
 
 const RelatedProducts = () => {
     return (
