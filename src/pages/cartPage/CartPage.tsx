@@ -9,7 +9,7 @@ export default function CartPage() {
   return (
     <div>
         <HighLightSection pageTitle="Cart"></HighLightSection>
-        <div className="flex flex-col w-full mx-auto pl-[100px] pr-[100px] py-[70px]">
+        <div className="flex flex-col w-full md:pl-[100px] md:pr-[100px] py-[70px] md:flex justify-center">
         {items.length === 0 ? (
             <p className="text-gray-500 text-[38px] text-center">Your cart is empty.</p>
         ) : (

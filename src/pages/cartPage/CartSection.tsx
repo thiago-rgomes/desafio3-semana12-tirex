@@ -11,44 +11,39 @@ export default function CartSection() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-center gap-[30px]">
-      <div className="w-full lg:w-2/3 bg-white py-6 space-y-[16px] 2xl:max-w-[817px]">
-        <div className="flex items-center w-full font-medium h-[55px] bg-[#F9F1E7] px-[40px] mb-[20px]">
-          <p className="ml-[8%] mr-[21%]">Product</p>
-          <p className="mr-[17%]">Price</p>
-          <p className="mr-[12%]">Quantity</p>
+    <div className="flex flex-col md:flex-row md:justify-center gap-[30px]">
+      <div className="w-full md:w-2/3 bg-white py-6 space-y-[16px] 2xl:max-w-[817px]">
+        <div className="grid grid-cols-5 font-medium h-[55px] bg-[#F9F1E7] px-[20px] mb-[20px] text-center place-items-center">
+          <p>Product</p>
+          <p>Price</p>
+          <p>Quantity</p>
           <p>Subtotal</p>
+          <p>Remove</p>
         </div>
         {items.map((item) => (
-          <div key={item.id} className="relative flex items-center justify-between pb-4">
-            <div className="flex items-center gap-4">
+          <div key={item.id} className="grid grid-cols-5 items-center px-[20px] gap-4 text-center">
+            <div className="flex items-center justify-center">
               <img
                 src={item.imageUrl}
                 alt={item.name}
-                className="w-20 h-20 object-cover rounded-lg"
-              />
-              <div className="flex gap-[70px]">
-                <h2 className="w-[150px] text-[#9F9F9F]">{item.name}</h2>
-                <p className="text-[#9F9F9F]">Rs. {item.price.toLocaleString()}</p>
-              </div>
+                className="w-20 h-20 object-cover rounded-md"
+              />             
             </div>
-
-            <div className="flex border border-[#9F9F9F] rounded-md gap-[14px] p-2">
+            <p className="text-[#9F9F9F]">Rs. {item.price.toLocaleString()}</p>
+            <div className="flex items-center justify-center border border-[#9F9F9F] rounded-md gap-2 p-2 max-w-[106px] ml-5">
               <button onClick={() => updateQuantity(item.id, -1)}>-</button>
               <span className="px-3 font-medium">{item.quantity}</span>
               <button onClick={() => updateQuantity(item.id, 1)}>+</button>
             </div>
-
             <p>Rs. {(item.price * item.quantity).toLocaleString()}</p>
-
-            <button onClick={() => removeFromCart(item.id)} className="text-red-500">
+            <button onClick={() => removeFromCart(item.id)} className="text-red-500 flex justify-center">
               <img src={trashIcon} alt="trash icon" />
             </button>
           </div>
         ))}
       </div>
 
-      <div className="flex flex-col items-center w-full lg:w-[393px] bg-[#F9F1E7] p-6 gap-[20px] mt-[24px]">
+      <div className="flex flex-col items-center w-full md:w-[393px] bg-[#F9F1E7] p-6 gap-[20px] mt-[24px]">
         <h2 className="text-[32px] font-semibold mb-4">Cart Totals</h2>
         <div className="flex justify-between gap-[60px] mb-[30px]">
           <span className="font-medium">Subtotal:</span>

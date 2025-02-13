@@ -15,22 +15,22 @@ const ShopPage = () => {
     <div>
       <HighLightSection pageTitle="Shop" />
 
-      <div className="flex justify-between items-center w-full h-[100px] bg-[#F9F1E7] px-[100px]">
-        <div className="flex items-center gap-8">
+      <div className="flex flex-col md:flex-row justify-between items-center w-full h-auto md:h-[100px] bg-[#F9F1E7] px-6 md:px-[100px] py-4 md:py-0 gap-4 md:gap-0">
+        <div className="flex items-center gap-4 md:gap-8">
           <img src={filterIcon} alt="filter icon" className="h-[25px] w-[25px]" />
           <p className="ml-[-10px]">Filter</p>
           <img src={gridIcon} alt="grid icon" className="h-[25px] w-[25px]" />
           <img src={listIcon} alt="list icon" className="h-[25px] w-[25px]" />
-          <div className="w-[2px] h-10 bg-[#9F9F9F] mx-4"></div>
+          <div className="hidden md:block w-[2px] h-10 bg-[#9F9F9F] mx-4"></div>
         </div>
 
-        <div className="flex gap-[30px]">
-          <div className="flex items-center text-[20px] gap-[17px]">
+        <div className="flex justify-center gap-4 md:gap-[30px] w-full md:w-auto">
+          <div className="flex items-center text-[16px] md:text-[20px] gap-[10px] md:gap-[17px]">
             <label>Show</label>
             <select
               value={itemsToShow}
               onChange={(e) => setItemsToShow(Number(e.target.value))}
-              className="flex w-[85px] h-[55px] text-[#9F9F9F] text-center"
+              className="w-[85px] h-[40px] md:h-[55px] text-[#9F9F9F] text-center"
             >
               <option value={4}>4</option>
               <option value={8}>8</option>
@@ -39,12 +39,12 @@ const ShopPage = () => {
             </select>
           </div>
 
-          <div className="flex items-center text-[20px] gap-[17px]">
+          <div className="flex items-center text-[16px] md:text-[20px] gap-[10px] md:gap-[17px]">
             <label>Sort by</label>
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="w-[188px] h-[55px] text-[#9F9F9F] text-center"
+              className="w-[140px] md:w-[188px] h-[40px] md:h-[55px] text-[#9F9F9F] text-center"
             >
               <option value="Default">Default</option>
               <option value="title">Title</option>
@@ -52,12 +52,12 @@ const ShopPage = () => {
             </select>
           </div>
 
-          <div className="flex items-center text-[20px] gap-[17px]">
+          <div className="flex items-center text-[16px] md:text-[20px] gap-[10px] md:gap-[17px]">
             <label>Order</label>
             <select
               value={filterBy}
               onChange={(e) => setFilterBy(e.target.value)}
-              className="w-[188px] h-[55px] text-[#9F9F9F] text-center"
+              className="w-[140px] md:w-[188px] h-[40px] md:h-[55px] text-[#9F9F9F] text-center"
             >
               <option value="Crescent">Crescent</option>
               <option value="Decrescent">Decrescent</option>
