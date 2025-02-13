@@ -92,9 +92,9 @@ const ProductPage = () => {
     <div>
       <ProductHighlight title={product.title} />
 
-      <div className="flex justify-center gap-[150px] pt-[30px] pb-[60px]">
+      <div className="flex flex-col justify-center md:flex-row md:justify-center px-6 md:px-0 md:gap-[150px] pt-[30px] pb-[60px]">
         <ProductGallery images={product.images} />
-        <div className="max-w-[506px]">
+        <div className="md:max-w-[506px]">
           <ProductDetails {...product} />
           <ProductOptions
             sizes={product.sizes}

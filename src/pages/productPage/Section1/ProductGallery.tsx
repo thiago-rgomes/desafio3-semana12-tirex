@@ -10,7 +10,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ images }) => {
   const thumbnails = images.filter((img) => img !== selectedImage);
 
   return (
-    <div className="flex gap-4">
+    <div className="flex justify-center gap-4 md:justify-start">
       <div className="flex flex-col gap-[32px]">
         {thumbnails.map((img, index) => (
           <img

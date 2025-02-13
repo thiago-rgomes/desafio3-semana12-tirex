@@ -13,7 +13,7 @@ export default function CartSection() {
   return (
     <div className="flex flex-col md:flex-row md:justify-center gap-[30px]">
       <div className="w-full md:w-2/3 bg-white py-6 space-y-[16px] 2xl:max-w-[817px]">
-        <div className="grid grid-cols-5 font-medium h-[55px] bg-[#F9F1E7] px-[20px] mb-[20px] text-center place-items-center">
+        <div className="grid grid-cols-5 font-medium h-[55px] bg-[#F9F1E7] sm:px-[20px] mb-[20px] text-center place-items-center">
           <p>Product</p>
           <p>Price</p>
           <p>Quantity</p>
@@ -21,7 +21,7 @@ export default function CartSection() {
           <p>Remove</p>
         </div>
         {items.map((item) => (
-          <div key={item.id} className="grid grid-cols-5 items-center px-[20px] gap-4 text-center">
+          <div key={item.id} className="grid grid-cols-5 items-center px-1 sm:px-[20px] gap-4 text-center">
             <div className="flex items-center justify-center">
               <img
                 src={item.imageUrl}
@@ -30,9 +30,9 @@ export default function CartSection() {
               />             
             </div>
             <p className="text-[#9F9F9F]">Rs. {item.price.toLocaleString()}</p>
-            <div className="flex items-center justify-center border border-[#9F9F9F] rounded-md gap-2 p-2 min-w-[68px] max-w-[106px] ml-5">
+            <div className="flex items-center justify-center max-w-[60px] border border-[#9F9F9F] rounded-md gap-2 p-2 sm:min-w-[68px] sm:max-w-[106px] sm:ml-5">
               <button onClick={() => updateQuantity(item.id, -1)}>-</button>
-              <span className="px-3 font-medium">{item.quantity}</span>
+              <span className="px-1 sm:px-3 font-medium">{item.quantity}</span>
               <button onClick={() => updateQuantity(item.id, 1)}>+</button>
             </div>
             <p>Rs. {(item.price * item.quantity).toLocaleString()}</p>
