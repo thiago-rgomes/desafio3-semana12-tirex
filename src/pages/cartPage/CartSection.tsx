@@ -1,5 +1,6 @@
 import { useCart } from "../../hooks/useCart";
-import trashIcon from "../../assets/cartpage/trash.png";
+
+const trashIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/cartpage/trash.png";
 
 export default function CartSection() {
   const { items, updateQuantity, removeFromCart } = useCart();

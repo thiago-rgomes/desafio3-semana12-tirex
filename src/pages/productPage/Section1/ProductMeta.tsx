@@ -1,6 +1,6 @@
-import fbIcon from "../../../assets/productpage/facebook-icon.png"
-import linkedinIcon from "../../../assets/productpage/linkedin-icon.png"
-import twitterIcon from "../../../assets/productpage/twitter-icon.png"
+const fbIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/productpage/facebook-icon.png";
+const linkedinIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/productpage/linkedin-icon.png";
+const twitterIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/productpage/twitter-icon.png";
 
 
 interface ProductMetaProps {

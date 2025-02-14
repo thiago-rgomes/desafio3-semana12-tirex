@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useInput } from "../../hooks/useInput";
 import { useLogin } from "../../hooks/useLogin";
 import LoginForm from "./LoginForm";
-import highLightBg from "../../assets/highlight/highlight-bg.png";
 import { useLocation } from "react-router-dom";
+
+const highLightBg = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/highlight/highlight-bg.png";
 
 
 const Login = () => {

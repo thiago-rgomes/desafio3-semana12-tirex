@@ -1,10 +1,11 @@
 import { useState } from "react";
 import HighLightSection from "../../components/HighLight/HighLightSection";
 import QualitySection from "../../components/Quality/QualitySection";
-import filterIcon from "../../assets/shoppage/filter-icon.png";
-import gridIcon from "../../assets/shoppage/grid-icon.png";
-import listIcon from "../../assets/shoppage/view-list-icon.png";
 import ProductList from "../../components/Product/ProductList";
+
+const filterIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/shoppage/filter-icon.png";
+const gridIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/shoppage/grid-icon.png  ";
+const listIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/shoppage/view-list-icon.png";
 
 const ShopPage = () => {
   const [sortBy, setSortBy] = useState("Default");

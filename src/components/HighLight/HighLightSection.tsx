@@ -1,6 +1,6 @@
-import siteLogo from "../../assets/header/site-logo.png";
-import highLightBg from "../../assets/highlight/highlight-bg.png";
-import gtIcon from "../../assets/highlight/gt-icon.png";
+const siteLogo = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/header/site-logo.png";
+const highLightBg = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/highlight/highlight-bg.png";
+const gtIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/highlight/gt-icon.png";
 
 const HighLightSection = ({ pageTitle }: { pageTitle: string }) => {
     return (

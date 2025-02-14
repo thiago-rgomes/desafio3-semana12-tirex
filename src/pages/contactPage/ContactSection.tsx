@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import InformationComponent from "./InformationComponent";
 import InputField from "./InputComponents";
-import locationIcon from "../../assets/contactpage/location-icon.png";
-import phoneIcon from "../../assets/contactpage/phone-icon.png";
-import clockIcon from "../../assets/contactpage/clock-icon.png";
+
+const locationIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/contactpage/location-icon.png";
+const phoneIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/contactpage/phone-icon.png";
+const clockIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/contactpage/clock-icon.png";
 
 const ContactSection: React.FC = () => {
     const [formData, setFormData] = useState({

@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "../hooks/useCart";
-import bagIcon from "../assets/header/bag-icon.png";
-import crossIcon from "../assets/header/cross-icon.png";
 import formatPrice from "../utils/format-price";
 import { useUser } from "@clerk/clerk-react";
+
+const bagIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/header/bag-icon.png"
+const crossIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/header/cross-icon.png"
 
 interface CartItem {
   id: number;

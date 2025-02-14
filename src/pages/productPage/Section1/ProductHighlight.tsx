@@ -1,4 +1,4 @@
-import gtIcon from "../../../assets/highlight/gt-icon.png"
+const gtIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/highlight/gt-icon.png"
 
 interface ProductHighlightProps {
     title: string;

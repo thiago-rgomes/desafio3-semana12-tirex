@@ -4,10 +4,10 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import { ArrowRight } from "lucide-react";
 
 const images = [
-  { id: 1, src: "/src/assets/homepage/section4/img1.png", title: "Inner Peace", category: "Bed Room" },
-  { id: 2, src: "/src/assets/homepage/section4/img2.png", title: "Cozy Vibes", category: "Living Room" },
-  { id: 3, src: "/src/assets/homepage/section4/img3.png", title: "Minimalist", category: "Dining Room" },
-  { id: 4, src: "/src/assets/homepage/section4/img1.png", title: "Great Style", category: "Workspace" },
+  { id: 1, src: "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section4/img1.png", title: "Inner Peace", category: "Bed Room" },
+  { id: 2, src: "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section4/img2.png", title: "Cozy Vibes", category: "Living Room" },
+  { id: 3, src: "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section4/img3.png", title: "Minimalist", category: "Dining Room" },
+  { id: 4, src: "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section4/img1.png", title: "Great Style", category: "Workspace" },
 ];
 
 export default function Carousel() {

@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useCart } from "../../hooks/useCart";
 import { Link, useNavigate } from "react-router-dom";
-import siteLogo from '../../assets/header/site-logo.png';
-import userIcon from '../../assets/header/user-icon.png';
-import cartIcon from '../../assets/header/cart-icon.png';
 import CartModal from "../../context/CartModal";
+
+const siteLogo = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/header/site-logo.png";
+const userIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/header/user-icon.png";
+const cartIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/header/cart-icon.png";
 
 const Header = () => {
   const navigate = useNavigate();

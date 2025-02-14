@@ -1,4 +1,4 @@
-import section1Bg from '../../../assets/homepage/section1/section1-bg.png';
+const section1Bg = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section1/section1-bg.png";
 
 const Section1 = () => {
   return (

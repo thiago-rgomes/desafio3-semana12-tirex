@@ -1,6 +1,6 @@
-import diningImg from '../../../assets/homepage/section2/dining-img.png';
-import livingImg from '../../../assets/homepage/section2/living-img.png';
-import bedroomImg from '../../../assets/homepage/section2/bedroom-img.png';
+const diningImg = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section2/dining-img.png";
+const livingImg = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section2/living-img.png";
+const bedroomImg = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section2/bedroom-img.png";
 
 const Section2 = () => {
   return (

@@ -6,15 +6,15 @@
         "subName": "Stylish cafe chair",
         "price": 2500000.00,
         "oldPrice": 3500000.00,
-        "imageUrl": "/assets/productpage/product/01/img-card.png",
+        "imageUrl": "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/01/img-card.png",
         "discount": 30,
         "title": "Asgaard sofa",
         "images": [
-          "/assets/productpage/product/01/mini-img1.png", 
-          "/assets/productpage/product/01/mini-img2.png", 
-          "/assets/productpage/product/01/mini-img3.png", 
-          "/assets/productpage/product/01/mini-img4.png", 
-          "/assets/productpage/product/01/mini-img5.png" 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/01/mini-img1.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/01/mini-img2.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/01/mini-img3.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/01/mini-img4.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/01/mini-img5.png"
         ],
         "rating": 4.5,
         "reviews": 5,
@@ -27,8 +27,8 @@
         "additionalTitle": "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.",
         "additionalDescription": "Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
         "descriptionImages": [
-          "/assets/productpage/product/01/description-img1.png",
-          "/assets/productpage/product/01/description-img2.png"
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/01/description-img1.png",
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/01/description-img2.png"
         ]
       },
       {
@@ -36,14 +36,14 @@
         "name": "Leviosa",
         "subName": "Stylish cafe chair",
         "price": 2500000.00,
-        "imageUrl": "/assets/productpage/product/02/img-card.png",
+        "imageUrl": "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/03/img-card.png",
         "title": "Leviosa Cafe Chair",
         "images": [
-          "/assets/productpage/product/02/mini-img1.png", 
-          "/assets/productpage/product/02/mini-img2.png", 
-          "/assets/productpage/product/02/mini-img3.png", 
-          "/assets/productpage/product/02/mini-img4.png", 
-          "/assets/productpage/product/02/mini-img5.png"
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img1.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img2.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img3.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img4.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img5.png"
         ],
         "rating": 4,
         "reviews": 15,
@@ -56,8 +56,8 @@
         "additionalTitle": "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.",
         "additionalDescription": "Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
         "descriptionImages": [
-          "/assets/productpage/product/02/description-img1.png",
-          "/assets/productpage/product/02/description-img2.png"
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/description-img1.png",
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/description-img2.png"
         ]
       },
       {
@@ -66,15 +66,15 @@
         "subName": "Luxury big sofa",
         "price": 7000000.00,
         "oldPrice": 14000000,
-        "imageUrl": "/assets/productpage/product/03/img-card.png",
+        "imageUrl": "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/03/img-card.png",
         "discount": 50,
         "title": "Asgaard sofa",
         "images": [
-          "/assets/productpage/product/03/mini-img1.png", 
-          "/assets/productpage/product/03/mini-img2.png", 
-          "/assets/productpage/product/03/mini-img3.png", 
-          "/assets/productpage/product/03/mini-img4.png", 
-          "/assets/productpage/product/03/mini-img5.png"
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img1.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img2.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img3.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img4.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img5.png"
         ],
         "rating": 4.5,
         "reviews": 5,
@@ -87,8 +87,8 @@
         "additionalTitle": "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.",
         "additionalDescription": "Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
         "descriptionImages": [
-          "/assets/productpage/product/03/description-img1.png",
-          "/assets/productpage/product/03/description-img2.png"
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/description-img1.png",
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/description-img2.png"
         ]
       },
       {
@@ -96,15 +96,15 @@
         "name": "Respira",
         "subName": "Outdoor bar table and stool",
         "price": 500000.00,
-        "imageUrl": "/assets/productpage/product/04/img-card.png",
+        "imageUrl": "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/04/img-card.png",
         "isNew": true,
         "title": "Asgaard sofa",
         "images": [
-          "/assets/productpage/product/04/mini-img1.png", 
-          "/assets/productpage/product/04/mini-img2.png", 
-          "/assets/productpage/product/04/mini-img3.png", 
-          "/assets/productpage/product/04/mini-img4.png", 
-          "/assets/productpage/product/04/mini-img5.png"
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img1.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img2.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img3.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img4.png", 
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/mini-img5.png"
         ],
         "rating": 4.5,
         "reviews": 5,
@@ -117,8 +117,8 @@
         "additionalTitle": "Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.",
         "additionalDescription": "Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.",
         "descriptionImages": [
-          "/assets/productpage/product/04/description-img1.png",
-          "/assets/productpage/product/04/description-img2.png"
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/description-img1.png",
+          "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/02/description-img2.png"
         ]
       },
       {
@@ -126,7 +126,7 @@
         "name": "Grifo",
         "subName": "Night lamp",
         "price": 1500000.00,
-        "imageUrl": "/assets/productpage/product/05/img-card.png",
+        "imageUrl": "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/05/img-card.png",
         "title": "Asgaard sofa",
         "images": [
           "/assets/productpage/product/05/mini-img1.png", 
@@ -155,7 +155,7 @@
         "name": "Muggo",
         "subName": "Small mug",
         "price": 150000.00,
-        "imageUrl": "/assets/productpage/product/06/img-card.png",
+        "imageUrl": "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/06/img-card.png",
         "isNew": true,
         "title": "Asgaard sofa",
         "images": [
@@ -186,7 +186,7 @@
         "subName": "Cute bed set",
         "price": 7000000.00,
         "oldPrice": 14000000.00,
-        "imageUrl": "/assets/productpage/product/07/img-card.png",
+        "imageUrl": "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/07/img-card.png",
         "discount": 50,
         "title": "Asgaard sofa",
         "images": [
@@ -216,7 +216,7 @@
         "name": "Potty",
         "subName": "Minimalist flower pot",
         "price": 500000.00,
-        "imageUrl": "/assets/productpage/product/08/img-card.png",
+        "imageUrl": "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/public/assets/productpage/product/03/img-card.png",
         "isNew": true,
         "title": "Asgaard sofa",
         "images": [

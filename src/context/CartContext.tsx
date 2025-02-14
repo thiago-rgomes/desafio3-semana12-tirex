@@ -27,14 +27,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         name: "Asgard Sofa",
         price: 250000,
         quantity: 1,
-        imageUrl: "/src/assets/header/cart-img1.png",
+        imageUrl: "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/header/cart-img1.png",
       },
       {
         id: 11,
         name: "Casaliving Wood",
         price: 270000,
         quantity: 2,
-        imageUrl: "/src/assets/header/cart-img2.png",
+        imageUrl: "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/header/cart-img2.png",
       },
     ];
   });

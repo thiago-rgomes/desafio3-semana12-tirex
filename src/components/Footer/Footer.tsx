@@ -1,10 +1,11 @@
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import faceBookIcon from "../../assets/footer/facebook-icon.png";
-import instagramIcon from "../../assets/footer/instagram-icon.png";
-import twitterIcon from "../../assets/footer/twitter-icon.png";
-import linkedinIcon from "../../assets/footer/linkedin-icon.png";
 import { useState } from "react";
+
+const twitterIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/footer/twitter-icon.png";
+const linkedinIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/footer/linkedin-icon.png";
+const instagramIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/footer/instagram-icon.png";
+const faceBookIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/footer/facebook-icon.png";
 
 const Footer = () => {
   const location = useLocation();

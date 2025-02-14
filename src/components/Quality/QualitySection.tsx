@@ -1,7 +1,7 @@
-import trophyIcon from "../../assets/quality/trophy-icon.png";
-import warrantyIcon from "../../assets/quality/warranty-icon.png";
-import shippingIcon from "../../assets/quality/shipping-icon.png";
-import supportIcon from "../../assets/quality/support-icon.png";
+const trophyIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/quality/trophy-icon.png";
+const warrantyIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/quality/warranty-icon.png";
+const shippingIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/quality/shipping-icon.png";
+const supportIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/quality/support-icon.png";
 
 const QualitySection = () => {
   return (

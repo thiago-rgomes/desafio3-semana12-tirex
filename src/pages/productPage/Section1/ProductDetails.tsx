@@ -1,5 +1,5 @@
-import starIcon from "../../../assets/productpage/star-icon.png"
-import halfStarIcon from "../../../assets/productpage/half-star-icon.png";
+const starIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/productpage/star-icon.png";
+const halfStarIcon = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/productpage/half-star-icon.png"
 
 interface ProductDetailsProps {
     title: string;

@@ -1,12 +1,13 @@
-import one from '../../../assets/homepage/section5/01.png';
-import two from '../../../assets/homepage/section5/02.png';
-import three from '../../../assets/homepage/section5/03.png';
-import four from '../../../assets/homepage/section5/04.png';
-import five from '../../../assets/homepage/section5/05.png';
-import six from '../../../assets/homepage/section5/06.png';
-import seven from '../../../assets/homepage/section5/07.png';
-import eight from '../../../assets/homepage/section5/08.png';
-import nine from '../../../assets/homepage/section5/09.png';
+const one = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section5/01.png";
+const two = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section5/02.png";
+const three = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section5/03.png";
+const four = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section5/04.png";
+const five = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section5/05.png";
+const six = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section5/06.png";
+const seven = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section5/07.png";
+const eight = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section5/08.png";
+const nine = "https://first-aws-bucket-tirex.s3.us-east-2.amazonaws.com/First-S3/src/assets/homepage/section5/09.png";
+
 
 const Section5 = () => {
   return (
